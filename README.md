@@ -1,2 +1,2 @@
-# gradiente-descendiente-funcion
-Calculadora de Gradiente Descendiente de una función cuadratica
+# gradiente-descendiente
+Calculadora de Gradiente Descendiente

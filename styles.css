@@ -51,8 +51,16 @@ h1 {
     font-size: 16px;
 }
 
+/* Estilos generales para los botones */
+.button-container {
+    display: flex; /* Hacer que los botones se alineen horizontalmente */
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior entre inputs y botones */
+}
+
+/* Otros estilos permanecen iguales */
 .button {
-    width: 100%;
+    flex: 1; /* Permitir que ambos botones ocupen el mismo espacio */
     padding: 15px;
     background-color: #8458a8;
     color: white;
@@ -60,6 +68,11 @@ h1 {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-right: 10px; /* Añadir un margen entre los botones */
+}
+
+.button:last-child {
+    margin-right: 0; /* Quitar el margen derecho del último botón */
 }
 
 .button:hover {
@@ -113,6 +126,7 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #663d88;
+    color: white;
     font-weight: bold;
 }

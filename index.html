@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="inputs-row"> <!-- Nuevo contenedor para los inputs -->
+    <div class="inputs-row">
         <div class="input-group">
             <label for="x_init">Valor inicial de x</label>
             <input type="number" id="x_init" placeholder="Ingresa el valor inicial de x">
@@ -35,13 +35,29 @@
         </div>
     </div>
 
+    
+<div class="button-container"> 
     <button class="button" onclick="calculate()">Calcular</button>
+    <button class="button" onclick="resetCalculator()">Limpiar</button>
+</div>
+
 
     <div class="result-container" id="result-container"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.min.js"></script>
 <script src="main.js"></script>
+
+<script>
+// Función para limpiar los campos de entrada y resultados
+function resetCalculator() {
+    document.getElementById('derivative').value = '';
+    document.getElementById('x_init').value = '';
+    document.getElementById('alpha').value = '';
+    document.getElementById('tolerance').value = '0.00001'; // Resetear a valor por defecto
+    document.getElementById('result-container').innerHTML = ''; // Limpiar resultados
+}
+</script>
 
 </body>
 </html>

@@ -9,26 +9,30 @@
 <body>
 
 <div class="container">
-    <h1>Calculadora de Gradiente Descendente</h1>
+    <h1>Gradiente Descendente</h1>
 
-    <div class="input-group">
-        <label for="x_init">Valor inicial de x</label>
-        <input type="number" id="x_init" placeholder="Ingresa el valor inicial de x">
+    <div class="inputs-row">
+        <div class="input-group">
+            <label for="derivative">Función F(x)</label>
+            <textarea id="derivative" placeholder="Ejemplo: -3*x^2 + 12*x + 100"></textarea>
+        </div>
     </div>
 
-    <div class="input-group">
-        <label for="alpha">Valor de alfa (α)</label>
-        <input type="number" id="alpha" step="0.01" placeholder="Ingresa el valor de alfa">
-    </div>
+    <div class="inputs-row"> <!-- Nuevo contenedor para los inputs -->
+        <div class="input-group">
+            <label for="x_init">Valor inicial de x</label>
+            <input type="number" id="x_init" placeholder="Ingresa el valor inicial de x">
+        </div>
 
-    <div class="input-group">
-        <label for="tolerance">Valor de tolerancia</label>
-        <input type="number" id="tolerance" step="0.000001" placeholder="Ingresa el valor de tolerancia" value="0.00001">
-    </div>
+        <div class="input-group">
+            <label for="alpha">Valor de alfa (α)</label>
+            <input type="number" id="alpha" step="0.01" placeholder="Ingresa el valor de alfa">
+        </div>
 
-    <div class="input-group">
-        <label for="derivative">Derivada de F(x)</label>
-        <textarea id="derivative" placeholder="Ejemplo: 2*x"></textarea>
+        <div class="input-group">
+            <label for="tolerance">Valor de tolerancia</label>
+            <input type="number" id="tolerance" step="0.000001" placeholder="Ingresa el valor de tolerancia" value="0.00001">
+        </div>
     </div>
 
     <button class="button" onclick="calculate()">Calcular</button>
@@ -36,7 +40,7 @@
     <div class="result-container" id="result-container"></div>
 </div>
 
-<!-- Llamada al archivo JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.min.js"></script>
 <script src="main.js"></script>
 
 </body>

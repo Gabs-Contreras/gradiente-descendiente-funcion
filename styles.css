@@ -3,41 +3,55 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 600px;
     margin: 0 auto;
     padding: 50px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: center;
     color: #333;
-  }
-  
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-group label {
+}
+
+.inputs-row {
+    display: flex; /* Usar flexbox para la fila de inputs */
+    justify-content: space-between; /* Espacio entre los inputs */
+    margin-bottom: 20px; /* Margen inferior para separar de otros elementos */
+}
+
+.input-group {
+    flex: 1; /* Permite que los inputs se expandan para ocupar espacio */
+    min-width: 150px; /* Establecer un ancho mínimo */
+    margin-right: 10px; /* Espacio entre los grupos */
+}
+
+/* Quitar margen derecho del último input */
+.input-group:last-child {
+    margin-right: 0; /* Quitar el margen derecho al último elemento */
+}
+
+.input-group label {
     display: block;
     margin-bottom: 5px;
     color: #555;
-  }
-  
-  .input-group input, .input-group textarea {
-    width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Hace que el input ocupe todo el espacio del contenedor */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .button {
+}
+
+.button {
     width: 100%;
     padding: 15px;
     background-color: #8458a8;
@@ -46,37 +60,59 @@ body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #663d88;
-  }
-  
-  .result-container {
-    
+}
+
+.result-container {
     margin-top: 20px;
-  }
-  
-  .result-container p {
+    overflow-x: auto; /* Añadir desplazamiento horizontal si es necesario */
+}
+
+.result-container p {
     font-size: 14px;
     color: #333;
-  }
-  
-  .result-container .final-result {
+}
+
+.result-container .final-result {
     font-weight: bold;
     font-size: 18px;
     margin-top: 10px;
-  }
-  
-  .separator {
+}
+
+.separator {
     margin-top: 20px;
     border-top: 1px solid #ddd;
-  }
-  
-  .highlight {
+}
+
+.highlight {
     background-color: #d9edf7;
     padding: 10px;
     border-radius: 5px;
     margin-top: 20px;
-  }
-  
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Evitar que las columnas se expandan más allá del contenedor */
+    word-wrap: break-word; /* Ajustar el texto automáticamente */
+    font-size: 12px; /* Fuente pequeña */
+    margin-top: 20px; /* Añadir margen superior entre tabla y resumen */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 6px; /* Reducir el espaciado interno */
+    text-align: left;
+    font-size: 12px; /* Reducir el tamaño de fuente */
+    word-wrap: break-word; /* Ajustar el texto en celdas largas */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
